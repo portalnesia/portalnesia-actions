@@ -1,0 +1,74 @@
+import * as semver from 'semver';
+import { ReleasesType } from './types';
+export default function getVersionInfo(release: ReleasesType, template: string, argsInputVersion?: string | null, versionKeyIncrement?: semver.ReleaseType | null): {
+    $NEXT_MAJOR_VERSION: {
+        version: string | semver.SemVer;
+        $MAJOR: number;
+        $MINOR: number;
+        $PATCH: number;
+        raw: string;
+        loose: boolean;
+        options: semver.Options;
+        major: number;
+        minor: number;
+        patch: number;
+        build: readonly string[];
+        prerelease: readonly (string | number)[];
+    };
+    $NEXT_MINOR_VERSION: {
+        version: string | semver.SemVer;
+        $MAJOR: number;
+        $MINOR: number;
+        $PATCH: number;
+        raw: string;
+        loose: boolean;
+        options: semver.Options;
+        major: number;
+        minor: number;
+        patch: number;
+        build: readonly string[];
+        prerelease: readonly (string | number)[];
+    };
+    $NEXT_PATCH_VERSION: {
+        version: string | semver.SemVer;
+        $MAJOR: number;
+        $MINOR: number;
+        $PATCH: number;
+        raw: string;
+        loose: boolean;
+        options: semver.Options;
+        major: number;
+        minor: number;
+        patch: number;
+        build: readonly string[];
+        prerelease: readonly (string | number)[];
+    };
+    $INPUT_VERSION: {
+        version: string | semver.SemVer;
+        $MAJOR: number;
+        $MINOR: number;
+        $PATCH: number;
+        raw: string;
+        loose: boolean;
+        options: semver.Options;
+        major: number;
+        minor: number;
+        patch: number;
+        build: readonly string[];
+        prerelease: readonly (string | number)[];
+    };
+    $RESOLVED_VERSION: {
+        version: string | semver.SemVer;
+        $MAJOR: number;
+        $MINOR: number;
+        $PATCH: number;
+        raw: string;
+        loose: boolean;
+        options: semver.Options;
+        major: number;
+        minor: number;
+        patch: number;
+        build: readonly string[];
+        prerelease: readonly (string | number)[];
+    };
+};
